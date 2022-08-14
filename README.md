@@ -6,6 +6,11 @@ Network-based Intrusion Detection has been one of the major focus areas of Cyber
 
 Given the "Big Data" nature of network traffic, it follows that Machine Learning and Artificial Intelligence may be able to assist in identifying and flagging malicious traffic for manual review. In this project, we employ various algorithms to detect simulated malicious network traffic provided by the [KDD Cup 1999 Challenge](http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html) and analyze their performance over different metrics.
 
+## Technologies
+
+**H2O** - Machine Learning
+
+**Numpy & Pandas** - Data Cleaning / Formatting
 
 ## Co-Authors:
 
