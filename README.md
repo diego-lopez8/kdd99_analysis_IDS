@@ -16,4 +16,4 @@ Given the "Big Data" nature of network traffic, it follows that Machine Learning
 
 [Diego Lopez](https://github.com/diego-lopez8)
 
-[David Czuka](https://github.com/dcsuka)
+[David Csuka](https://github.com/dcsuka)
