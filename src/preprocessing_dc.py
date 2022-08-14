@@ -23,6 +23,17 @@ modified_test_df = test_df[test_df.labels.isin(train_test_intersect)].drop(colum
 
 modified_test_df = pd.get_dummies(data = modified_test_df, columns = ["protocol_type", "service", "flag"], prefix = ["protocol_type", "service", "flag"])
 
+# Some services (ICMP, Red_I, etc) are present in either dataset, but not both.
+# create dummy column that placeholds the service
+# In Production & with more compute power, it is common to one-hot encode all "well known" services (ports 0-1023)
+for col in modified_train_df.columns:
+    if col not in modified_test_df.columns:
+        modified_test_df[col] = [0] * len(modified_test_df.index)
+
+for col in modified_test_df.columns:
+    if col not in modified_train_df.columns:
+        modified_train_df[col] = [0] * len(modified_train_df.index)
+
 modified_train_df.to_csv("../data/processed/traindata.csv")
 
 modified_test_df.to_csv("../data/processed/testdata.csv")
