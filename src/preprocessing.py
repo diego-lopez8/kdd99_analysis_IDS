@@ -1,7 +1,10 @@
+# Author: Diego Lopez
+# Date last modified: 08/15/2022
 # This file performs basic preprocessing on the KDD Cup data downloaded from the website: 
 # http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html
-# TODO: One hot encoding / label encoding of categorical features
-# TODO: combine both preprocessing scripts
+# Specifically, this prepares training and test data for unsupervised training
+# For supervised training, run the "preprocessing_dc.py" script immediately after. 
+# TODO: combine both preprocessing scripts?
 import pandas as pd
 import numpy as np
 
@@ -22,7 +25,6 @@ train_10pct_df['labels'] = train_10pct_df['labels'].str.replace(".", "")
 train_10pct_df['attack'] = train_10pct_df['labels'].replace(attack_dict)
 test_df['labels'] = test_df['labels'].str.replace(".", "")
 test_df['attack'] = test_df['labels'].replace(attack_dict)
-test_df.head(10)
 
 # export
 test_df.to_csv("../data/raw/test1.csv")
