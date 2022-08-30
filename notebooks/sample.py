@@ -12,16 +12,16 @@ from sklearn.utils import class_weight
 #os.chdir("/Users/davidcsuka/Documents/kdd99_analysis_IDS/notebooks")
 
 train = pd.read_csv("../data/processed/traindata.csv")
-test = pd.read_csv("../data/processed/testdata.csv")
+test  = pd.read_csv("../data/processed/testdata.csv")
 
-encoder = LabelEncoder()
+encoder         = LabelEncoder()
 train['labels'] = encoder.fit_transform(train['labels'])
-test['labels'] = encoder.fit_transform(test['labels'])
+test['labels']  = encoder.fit_transform(test['labels'])
 
 train_x = train.drop("labels", axis=1).values
 train_y = train.labels.to_numpy()
-test_x = test.drop("labels", axis=1).values
-test_y = test.labels.to_numpy()
+test_x  = test.drop("labels", axis=1).values
+test_y  = test.labels.to_numpy()
 
 n_features = train_x.shape[1]
 
