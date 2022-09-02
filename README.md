@@ -10,6 +10,8 @@ Given the "Big Data" nature of network traffic, it follows that Machine Learning
 
 **H2O** - Machine Learning
 
+**TensorFlow** - Deep Learning
+
 **Numpy & Pandas** - Data Cleaning / Formatting
 
 ## Co-Authors:
